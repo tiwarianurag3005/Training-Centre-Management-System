@@ -1,0 +1,33 @@
+﻿@model List<TrainingCentreManagement.Models.Batch>
+
+<h2>My Batche</h2>
+
+<table border="1">
+
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Course Id</th>
+        <th>Trainer Id</th>
+        <th>Start</th>
+        <th>End</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.BatchId</td>
+            <td>@item.BatchName</td>
+            <td>@item.CourseId</td>
+            <td>@item.TrainerId</td>
+            <td>@item.StartDate</td>
+            <td>@item.EndDate</td>
+
+        </tr>
+    }
+
+</table>
+<br />
+
+<a href="/TrainerPanel/Dashboard">Back to Dashboard</a>

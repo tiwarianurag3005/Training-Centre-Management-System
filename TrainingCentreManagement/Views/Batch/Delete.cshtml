@@ -1,0 +1,44 @@
+﻿@model TrainingCentreManagement.Models.Batch
+
+@{
+    ViewData["Title"] = "Delete Batch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete Batch</h2>
+
+<h3>Are you sure you want to delete this batch?</h3>
+
+<hr />
+
+<p>
+    <b>Batch Name:</b> @Model.BatchName
+</p>
+
+<p>
+    <b>Course Id:</b> @Model.CourseId
+</p>
+
+<p>
+    <b>Trainer Id:</b> @Model.TrainerId
+</p>
+
+<p>
+    <b>Start Date:</b> @Model.StartDate.ToShortDateString()
+</p>
+
+<p>
+    <b>End Date:</b> @Model.EndDate.ToShortDateString()
+</p>
+
+<form asp-action="Delete" method="post">
+
+    <input type="hidden" asp-for="BatchId" />
+
+    <button type="submit">Delete</button>
+
+</form>
+
+<br />
+
+<a href="/Batch">Cancel</a>

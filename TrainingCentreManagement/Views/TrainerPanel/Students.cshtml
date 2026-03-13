@@ -1,0 +1,38 @@
+﻿@model IEnumerable<TrainingCentreManagement.Models.Student>
+
+<h2>Students List</h2>
+
+<hr />
+
+<table border="1">
+
+    <tr>
+
+        <th>Student Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Course Id</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+
+            <td>@item.StudentId</td>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+            <td>@item.CourseId</td>
+
+        </tr>
+
+    }
+
+</table>
+
+<br />
+
+<a href="/TrainerPanel/Dashboard">Back</a>

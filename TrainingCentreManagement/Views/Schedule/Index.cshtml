@@ -1,0 +1,42 @@
+﻿@model List<TrainingCentreManagement.Models.Schedule>
+
+<h2>Training Schedule</h2>
+
+<a asp-action="Create">Add Schedule</a>
+
+<table border="1">
+
+    <tr>
+        <th>ID</th>
+        <th>Batch</th>
+        <th>Date</th>
+        <th>Topic</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.ScheduleId</td>
+            <td>@item.BatchId</td>
+            <td>@item.Date</td>
+            <td>@item.Topic</td>
+
+            <td>
+
+                <a asp-action="Edit" asp-route-id="@item.ScheduleId">Edit</a>
+
+                |
+
+                <a asp-action="Delete" asp-route-id="@item.ScheduleId">Delete</a>
+
+            </td>
+
+        </tr>
+    }
+
+</table>
+<br />
+
+<a href="/Admin/Dashboard">Back to Dashboard</a>

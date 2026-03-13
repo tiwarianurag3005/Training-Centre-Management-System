@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Training Centre Login</h2>
+
+<hr />
+
+<form asp-action="Login" method="post">
+    <br/>
+    <div>
+        <label>Username</label><br />
+        <input type="text" name="username" required />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Password</label><br />
+        <input type="password" name="password" required />
+    </div>
+
+    <br />
+
+    <div>
+        <button type="submit">Login</button>
+    </div>
+    <br />
+
+</form>
+
+<br />
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}

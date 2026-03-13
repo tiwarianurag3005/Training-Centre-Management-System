@@ -1,0 +1,46 @@
+﻿@model IEnumerable<TrainingCentreManagement.Models.Trainer>
+
+@{
+    ViewData["Title"] = "Trainer List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Trainer List</h2>
+
+<p>
+    <a href="/Trainer/Create">Add New Trainer</a>
+</p>
+
+<table border="1" cellpadding="10">
+
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Expertise</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.TrainerId</td>
+            <td>@item.TrainerName</td>
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+            <td>@item.Expertise</td>
+
+            <td>
+                <a href="/Trainer/Edit/@item.TrainerId">Edit</a> |
+                <a href="/Trainer/Delete/@item.TrainerId">Delete</a>
+            </td>
+
+        </tr>
+    }
+
+</table>
+<br />
+
+<a href="/Admin/Dashboard">Back to Dashboard</a>

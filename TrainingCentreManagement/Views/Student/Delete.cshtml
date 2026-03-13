@@ -1,0 +1,40 @@
+﻿@model TrainingCentreManagement.Models.Student
+
+@{
+    ViewData["Title"] = "Delete Student";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete Student</h2>
+
+<h3>Are you sure you want to delete this student?</h3>
+
+<hr />
+
+<p>
+    <b>Name:</b> @Model.Name
+</p>
+
+<p>
+    <b>Email:</b> @Model.Email
+</p>
+
+<p>
+    <b>Phone:</b> @Model.Phone
+</p>
+
+<p>
+    <b>Course Id:</b> @Model.CourseId
+</p>
+
+<form asp-action="Delete" method="post">
+
+    <input type="hidden" asp-for="StudentId" />
+
+    <button type="submit">Delete</button>
+
+</form>
+
+<br />
+
+<a href="/Student">Cancel</a>

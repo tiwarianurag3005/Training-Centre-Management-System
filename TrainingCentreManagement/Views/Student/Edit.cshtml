@@ -1,0 +1,37 @@
+﻿@model TrainingCentreManagement.Models.Student
+
+<h2>Edit Student</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="StudentId" />
+
+    <br>
+
+    <label>Name</label>
+    <br>
+    <input asp-for="Name" />
+
+    <br><br>
+
+    <label>Email</label>
+    <br>
+    <input asp-for="Email" />
+
+    <br><br>
+
+    <label>Phone</label>
+    <br>
+    <input asp-for="Phone" />
+
+    <br><br>
+
+    <label>Course Id</label>
+    <br>
+    <input asp-for="CourseId" />
+
+    <br><br>
+
+    <button type="submit">Update</button>
+
+</form>

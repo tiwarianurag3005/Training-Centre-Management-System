@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Admin Dashboard</h2>
+
+<h4>Welcome Admin! Manage courses, trainers, students, schedules, and monitor the entire training centre from one place.</h4>
+
+<hr />
+
+<h3>Management Panel</h3>
+
+<ul>
+
+    <li>
+        <a asp-controller="Course" asp-action="Index">Manage Courses</a>
+    </li>
+
+    <li>
+        <a asp-controller="Trainer" asp-action="Index">Manage Trainers</a>
+    </li>
+
+    <li>
+        <a asp-controller="Student" asp-action="Index">Manage Students</a>
+    </li>
+
+    <li>
+        <a asp-controller="Batch" asp-action="Index">Manage Batches</a>
+    </li>
+
+    <li>
+        <a asp-controller="Schedule" asp-action="Index">Manage Training Schedule</a>
+    </li>
+
+    <li>
+        <a asp-controller="Attendance" asp-action="Index">View Attendance</a>
+    </li>
+</ul>
+
+<hr />
+
+<div>
+    <a href="/Account/Logout">Logout</a>
+</div>

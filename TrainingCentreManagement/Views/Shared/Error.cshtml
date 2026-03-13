@@ -1,0 +1,25 @@
+﻿@model TrainingCentreManagement.Models.ErrorViewModel
+
+@{
+    ViewData["Title"] = "Error";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Error</h2>
+
+<p>
+
+    An error occurred while processing your request.
+
+</p>
+
+@if (Model != null)
+{
+
+    <p>
+
+        Request ID: @Model.RequestId
+
+    </p>
+
+}

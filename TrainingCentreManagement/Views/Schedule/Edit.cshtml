@@ -1,0 +1,32 @@
+﻿@model TrainingCentreManagement.Models.Schedule
+
+<h2>Edit Schedule</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="ScheduleId" />
+
+    <label>Batch Id</label>
+    <input asp-for="BatchId" />
+
+    <br /><br />
+
+    <label>Date & Time</label>
+    <input type="datetime-local"
+           asp-for="Date"
+           value="@Model.Date.ToString("yyyy-MM-ddTHH:mm")" />
+
+    <br /><br />
+
+    <label>Topic</label>
+    <input asp-for="Topic" />
+
+    <br /><br />
+
+    <button type="submit">Update</button>
+
+</form>
+
+<br />
+
+<a asp-action="Index">Back to List</a>

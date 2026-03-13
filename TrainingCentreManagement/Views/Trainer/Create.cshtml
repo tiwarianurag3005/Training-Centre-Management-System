@@ -1,0 +1,58 @@
+﻿@model TrainingCentreManagement.Models.Trainer
+
+@{
+    ViewData["Title"] = "Create Trainer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add New Trainer</h2>
+
+<form asp-action="Create" method="post">
+
+    <div>
+
+        <label>Trainer Name</label>
+        <br />
+        <input asp-for="TrainerName" />
+
+    </div>
+
+    <br />
+
+    <div>
+
+        <label>Email</label>
+        <br />
+        <input asp-for="Email" />
+
+    </div>
+
+    <br />
+
+    <div>
+
+        <label>Phone</label>
+        <br />
+        <input asp-for="Phone" />
+
+    </div>
+
+    <br />
+
+    <div>
+
+        <label>Expertise</label>
+        <br />
+        <input asp-for="Expertise" />
+
+    </div>
+
+    <br />
+
+    <button type="submit">Save</button>
+
+</form>
+
+<br />
+
+<a href="/Trainer">Back to List</a>

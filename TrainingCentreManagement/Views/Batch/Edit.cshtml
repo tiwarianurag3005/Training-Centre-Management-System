@@ -1,0 +1,41 @@
+﻿@model TrainingCentreManagement.Models.Batch
+
+<h2>Edit Batch</h2>
+
+<form asp-action="Edit">
+
+    <input type="hidden" asp-for="BatchId" />
+
+    Batch Name
+    <input asp-for="BatchName" />
+
+    <br />
+    <br />
+
+    Course Id
+    <input asp-for="CourseId" />
+
+    <br />
+    <br />
+
+    Trainer Id
+    <input asp-for="TrainerId" />
+
+    <br />
+    <br />
+
+    <label>Start Date</label>
+    <input type="datetime-local" asp-for="StartDate" />
+
+    <br />
+    <br />
+
+    <label>End Date</label>
+    <input type="datetime-local" asp-for="EndDate" />
+
+    <br />
+    <br />
+
+    <button type="submit">Update</button>
+
+</form>

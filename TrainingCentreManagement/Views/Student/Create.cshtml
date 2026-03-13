@@ -1,0 +1,50 @@
+﻿@model TrainingCentreManagement.Models.Student
+
+@{
+    ViewData["Title"] = "Create Student";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add New Student</h2>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label>Name</label>
+        <br />
+        <input asp-for="Name" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Email</label>
+        <br />
+        <input asp-for="Email" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Phone</label>
+        <br />
+        <input asp-for="Phone" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Course Id</label>
+        <br />
+        <input asp-for="CourseId" />
+    </div>
+
+    <br />
+
+    <button type="submit">Save</button>
+
+</form>
+
+<br />
+
+<a href="/Student">Back to List</a>

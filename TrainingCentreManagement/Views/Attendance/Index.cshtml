@@ -1,0 +1,38 @@
+﻿@model List<TrainingCentreManagement.Models.Attendance>
+
+<h2>Attendance List</h2>
+
+<a asp-action="MarkAttendance">Mark Attendance</a>
+
+<table border="1">
+
+    <tr>
+        <th>ID</th>
+        <th>Student Id</th>
+        <th>Batch Id</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.AttendanceId</td>
+            <td>@item.StudentId</td>
+            <td>@item.BatchId</td>
+            <td>@item.Date</td>
+            <td>@item.Status</td>
+
+            <td>
+                <a asp-action="Delete" asp-route-id="@item.AttendanceId">Delete</a>
+            </td>
+
+        </tr>
+    }
+
+</table>
+<br />
+
+<a href="/Admin/Dashboard">Back to Dashboard</a>

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<TrainingCentreManagement.Models.Schedule>
+
+<h2>My Schedule</h2>
+
+<table border="1">
+
+    <tr>
+        <th>Schedule Id</th>
+        <th>Batch Id</th>
+        <th>Date</th>
+        <th>Topic</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>@item.ScheduleId</td>
+            <td>@item.BatchId</td>
+            <td>@item.Date</td>
+            <td>@item.Topic</td>
+        </tr>
+
+    }
+
+</table>
+<br />
+
+<a href="/StudentPanel/Dashboard">Back to Dashboard</a>

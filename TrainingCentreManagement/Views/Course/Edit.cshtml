@@ -1,0 +1,31 @@
+﻿@model TrainingCentreManagement.Models.Course
+
+<h2>Edit Course</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="CourseId" />
+
+    <br>
+
+    <label>Course Name</label>
+    <br>
+    <input asp-for="CourseName" />
+
+    <br><br>
+
+    <label>Duration</label>
+    <br>
+    <input asp-for="Duration" />
+
+    <br><br>
+
+    <label>Fee</label>
+    <br>
+    <input asp-for="Fee" />
+
+    <br><br>
+
+    <button type="submit">Update</button>
+
+</form>

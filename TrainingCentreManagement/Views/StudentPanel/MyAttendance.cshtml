@@ -1,0 +1,33 @@
+﻿@model IEnumerable<TrainingCentreManagement.Models.Attendance>
+
+<h2>My Attendance</h2>
+
+<table border="1">
+
+    <tr>
+        <th>Attendance Id</th>
+        <th>Student Id</th>
+        <th>Batch Id</th>
+        <th>Date</th>
+        <th>Status</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+
+            <td>@item.AttendanceId</td>
+            <td>@item.StudentId</td>
+            <td>@item.BatchId</td>
+            <td>@item.Date</td>
+            <td>@item.Status</td>
+
+        </tr>
+
+    }
+
+</table>
+<br />
+
+<a href="/StudentPanel/Dashboard">Back to Dashboard</a>

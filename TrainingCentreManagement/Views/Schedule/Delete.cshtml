@@ -1,0 +1,36 @@
+﻿@model TrainingCentreManagement.Models.Schedule
+
+@{
+    ViewData["Title"] = "Delete Schedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete Schedule</h2>
+
+<h3>Are you sure you want to delete this schedule?</h3>
+
+<hr />
+
+<p>
+    <b>Batch Id:</b> @Model.BatchId
+</p>
+
+<p>
+    <b>Date:</b> @Model.Date.ToShortDateString()
+</p>
+
+<p>
+    <b>Topic:</b> @Model.Topic
+</p>
+
+<form asp-action="Delete" method="post">
+
+    <input type="hidden" asp-for="ScheduleId" />
+
+    <button type="submit">Delete</button>
+
+</form>
+
+<br />
+
+<a href="/Schedule">Cancel</a>

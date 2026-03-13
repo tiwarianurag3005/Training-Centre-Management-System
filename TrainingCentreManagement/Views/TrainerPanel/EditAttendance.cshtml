@@ -1,0 +1,54 @@
+﻿@model TrainingCentreManagement.Models.Attendance
+
+<h2>Edit Attendance</h2>
+
+<hr />
+
+<form asp-action="EditAttendance" method="post">
+
+    <input type="hidden" asp-for="AttendanceId" />
+
+    <label>Student Id</label>
+
+    <br />
+
+    <input asp-for="StudentId" />
+
+    <br /><br />
+
+    <label>Batch Id</label>
+
+    <br />
+
+    <input asp-for="BatchId" />
+
+    <br /><br />
+
+    <label>Date</label>
+
+    <br />
+
+    <input asp-for="Date" type="date" />
+
+    <br /><br />
+
+    <label>Status</label>
+
+    <br />
+
+    <select asp-for="Status">
+
+        <option value="Present">Present</option>
+        <option value="Absent">Absent</option>
+
+    </select>
+
+    <br /><br />
+
+    <button type="submit">Update Attendance</button>
+
+</form>
+
+<br />
+
+<a href="/TrainerPanel/AttendanceList">Back</a>

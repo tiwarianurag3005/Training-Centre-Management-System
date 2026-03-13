@@ -1,0 +1,25 @@
+﻿@model List<TrainingCentreManagement.Models.Course>
+
+<h2>My Courses</h2>
+
+<table border="1">
+    <tr>
+        <th>Course Name</th>
+        <th>Duration</th>
+        <th>Fee</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CourseName</td>
+            <td>@item.Duration</td>
+            <td>@item.Fee</td>
+        </tr>
+    }
+
+</table>
+
+<br />
+
+<a href="/StudentPanel/Dashboard">Back to Dashboard</a>

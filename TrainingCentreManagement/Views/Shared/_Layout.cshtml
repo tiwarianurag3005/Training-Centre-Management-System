@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Training Centre</title>
+
+</head>
+
+<body>
+
+    <h1>Training Centre Management System</h1>
+    <h4>Building careers through quality training and practical experience.</h4>
+
+    <hr />
+
+    @* <nav>
+
+        <a asp-controller="Admin" asp-action="Dashboard">Admin Dashboard</a> |
+
+       <a asp-controller="TrainerPanel" asp-action="Dashboard">Trainer Dashboard</a> | |
+
+       <a asp-controller="StudentPanel" asp-action="Dashboard">Student Dashboard</a> | |
+
+        <a asp-controller="Student" asp-action="Index">Students</a> |
+
+        <a asp-controller="Batch" asp-action="Index">Batches</a> |
+
+        <a asp-controller="Schedule" asp-action="Index">Schedule</a> |
+
+        <a asp-controller="Attendance" asp-action="Index">Attendance</a> |
+
+        <a asp-controller="Account" asp-action="Logout">Logout</a>
+    </nav>
+
+    <hr /> *@
+
+    <div>
+
+        @RenderBody()
+
+    </div>
+
+</body>
+
+</html>
